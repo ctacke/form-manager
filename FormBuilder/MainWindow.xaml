@@ -1,0 +1,186 @@
+﻿<Window x:Class="FormBuilder.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:FormBuilder"
+        mc:Ignorable="d"
+        x:Name="parentWindow"
+        Title="OpenNETCF Form Builder" 
+        Height="586.489" 
+        Width="1010.379">
+
+    <Window.Resources>
+        <ResourceDictionary>
+            <Image x:Key="refresh" Source="Images/refresh.png" />
+        </ResourceDictionary>
+    </Window.Resources>
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="3*" />
+            <ColumnDefinition Width="5" />
+            <ColumnDefinition Width="7*" />
+        </Grid.ColumnDefinitions>
+
+        <Grid 
+            x:Name="formListPanel" 
+            Grid.Column="0" >
+            <Grid.RowDefinitions>
+                <RowDefinition Height="40" />
+                <RowDefinition Height="*" />
+                <RowDefinition Height="Auto" />
+            </Grid.RowDefinitions>
+            <Label
+                Grid.Row="0"
+                Content="Available Forms"
+                HorizontalAlignment="Center"
+                />
+            <ListView
+                Grid.Row="1"
+                ItemsSource="{Binding Forms}"
+                SelectedItem="{Binding SelectedSummary}" >
+                <ListView.ItemTemplate>
+                    <DataTemplate>
+                        <StackPanel>
+                            <Label Content="{Binding FormName}" />
+                        </StackPanel>
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+            </ListView>
+            <StackPanel
+                Grid.Row="2"
+                Orientation="Horizontal"
+                HorizontalAlignment="Right"
+                Height="50">
+                <Button 
+                    x:Name="refreshForms" 
+                    Width="40" 
+                    Height="40" 
+                    Background="Transparent"
+                    Command="{Binding RefreshFormsClickHandler}">
+                    <Image Source="Images/refresh.png" />
+                </Button>
+                <Button 
+                    x:Name="addForm" 
+                    Width="40" 
+                    Height="40" 
+                    Background="Transparent"
+                    Command="{Binding AddFormClickHandler}">
+                    <Image Source="Images/add_form.png" />
+                </Button>
+            </StackPanel>
+        </Grid>
+
+        <GridSplitter
+            Grid.Column="1"
+            Width="5"
+            HorizontalAlignment="Stretch" />
+        <DockPanel
+            Height="Auto"
+            VerticalAlignment="Stretch"
+            HorizontalAlignment="Stretch"
+            Grid.Column="2">
+            <Grid
+                DockPanel.Dock="Top"
+                x:Name="formDetailsPanel"
+                    >
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="30" />
+                    <RowDefinition Height="80" />
+                    <RowDefinition Height="Auto" />
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="1*" />
+                    <ColumnDefinition Width="5*" />
+                </Grid.ColumnDefinitions>
+                <Label 
+                    Content="Form Name:"
+                    Grid.Row="0"
+                    Grid.Column="0"/>
+                <TextBox
+                    Grid.Row="0"
+                    Grid.Column="1"
+                    Margin="3.2,3,3.4,2.8"
+                    Text="{Binding SelectedForm.FormName}" />
+
+                <Label 
+                    Content="Description:"
+                    Grid.Row="1"
+                    Grid.Column="0"/>
+                <TextBox
+                    Grid.Row="1"
+                    Grid.Column="1"
+                    Margin="3,3,3,3"
+                    Text="{Binding SelectedForm.Description}"
+                    AcceptsReturn="True"
+                    TextWrapping="Wrap"
+                    VerticalScrollBarVisibility="Auto" />
+            </Grid>
+            <ScrollViewer 
+                >
+                <Grid>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="Auto" />
+                        <RowDefinition Height="Auto" />
+                        <RowDefinition Height="Auto" />
+                        <RowDefinition Height="Auto" />
+                        <RowDefinition Height="Auto" />
+                        <RowDefinition Height="Auto" />
+                    </Grid.RowDefinitions>
+                    <Label 
+                        Content="FORM HEADER"
+                        Grid.Row="0"
+                        HorizontalAlignment="Center"/>
+                    <ListView
+                        x:Name="headerList"
+                        Grid.Row="1"
+                        ItemsSource="{Binding SelectedForm.Header.Fields}">
+                        <ListView.ItemTemplate>
+                            <DataTemplate>
+                                <StackPanel>
+                                    <Label Content="{Binding Text}" />
+                                </StackPanel>
+                            </DataTemplate>
+                        </ListView.ItemTemplate>
+                    </ListView>
+
+                    <Label 
+                        Content="FORM QUESTIONS"
+                        Grid.Row="2"
+                        HorizontalAlignment="Center" />
+
+                    <ListView
+                        x:Name="questionList"
+                        Grid.Row="3"
+                        ItemsSource="{Binding SelectedForm.Questions}">
+                        <ListView.ItemTemplate>
+                            <DataTemplate>
+                                <StackPanel>
+                                    <Label Content="{Binding QuestionText}" />
+                                </StackPanel>
+                            </DataTemplate>
+                        </ListView.ItemTemplate>
+
+                    </ListView>
+                    <Label 
+                        Content="FORM FOOTER"
+                        Grid.Row="4"
+                        HorizontalAlignment="Center"/>
+                    <ListView
+                        x:Name="footerList"
+                        Grid.Row="5"
+                        ItemsSource="{Binding SelectedForm.Footer.Fields}">
+                        <ListView.ItemTemplate>
+                            <DataTemplate>
+                                <StackPanel>
+                                    <Label Content="{Binding Text}" />
+                                </StackPanel>
+                            </DataTemplate>
+                        </ListView.ItemTemplate>
+
+                    </ListView>
+                </Grid>
+            </ScrollViewer>
+        </DockPanel>
+    </Grid>
+</Window>
