@@ -137,9 +137,31 @@
                         ItemsSource="{Binding SelectedForm.Header.Fields}">
                         <ListView.ItemTemplate>
                             <DataTemplate>
-                                <StackPanel>
-                                    <Label Content="{Binding Text}" />
-                                </StackPanel>
+                                <Grid Width="Auto" HorizontalAlignment="Stretch">
+                                    <Grid.ColumnDefinitions>
+                                        <ColumnDefinition Width="60" />
+                                        <ColumnDefinition Width="100" />
+                                        <ColumnDefinition Width="60" />
+                                        <ColumnDefinition Width="100" />
+                                        <ColumnDefinition Width="Auto" />
+                                    </Grid.ColumnDefinitions>
+                                    <Label 
+                                            Grid.Column="0"
+                                            Content="Text:" />
+                                    <Label 
+                                            Grid.Column="1"
+                                            Content="{Binding Text}" />
+                                    <Label 
+                                            Grid.Column="2"
+                                            Content="Default:" />
+                                    <Label 
+                                            Grid.Column="3"
+                                            Content="{Binding DefaultValue}" />
+                                    <Button Width="30" Height="30" Background="Transparent"
+                                            Grid.Column="4">
+                                        <Image Source="Images/delete.png" />
+                                    </Button>
+                                </Grid>
                             </DataTemplate>
                         </ListView.ItemTemplate>
                     </ListView>

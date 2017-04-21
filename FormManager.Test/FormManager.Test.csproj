@@ -54,14 +54,6 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\..\..\shared\OpenNETCF.ORM\OpenNETCF.ORM\OpenNETCF.ORM.csproj">
-      <Project>{6e9c7da3-ad60-4e44-9d3a-7bbd3a20d79f}</Project>
-      <Name>OpenNETCF.ORM</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\..\..\shared\OpenNETCF.ORM\SQLite\OpenNETCF.ORM.SQLite\OpenNETCF.ORM.SQLite.FFx.csproj">
-      <Project>{750ed0af-fe89-4efc-bf7a-c29cbdd8aa7f}</Project>
-      <Name>OpenNETCF.ORM.SQLite.FFx</Name>
-    </ProjectReference>
     <ProjectReference Include="..\FormManager.Common\FormManager.Common.csproj">
       <Project>{0e1dcc2b-a186-4c70-9114-ae2368034bd1}</Project>
       <Name>FormManager.Common</Name>

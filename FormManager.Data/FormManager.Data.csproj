@@ -32,12 +32,20 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="OpenNETCF.Extensions, Version=1.0.186.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\packages\com.opennetcf.extensions.ffx.1.0.186.0\lib\OpenNETCF.Extensions.dll</HintPath>
+    <Reference Include="OpenNETCF.Extensions, Version=1.0.17110.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\com.opennetcf.extensions.ffx.1.0.17110.0\lib\net40\OpenNETCF.Extensions.dll</HintPath>
       <Private>True</Private>
     </Reference>
     <Reference Include="OpenNETCF.IoC, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
       <HintPath>..\packages\com.opennetcf.ioc.ffx.1.0.186.0\lib\OpenNETCF.IoC.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="OpenNETCF.ORM, Version=1.0.17110.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\opennetcf-orm-sqlite.1.0.17110.0\lib\net40\OpenNETCF.ORM.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="OpenNETCF.ORM.SQLite, Version=1.0.17110.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\opennetcf-orm-sqlite.1.0.17110.0\lib\net40\OpenNETCF.ORM.SQLite.dll</HintPath>
       <Private>True</Private>
     </Reference>
     <Reference Include="System" />
@@ -79,14 +87,6 @@
     <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\..\..\shared\OpenNETCF.ORM\OpenNETCF.ORM\OpenNETCF.ORM.csproj">
-      <Project>{6e9c7da3-ad60-4e44-9d3a-7bbd3a20d79f}</Project>
-      <Name>OpenNETCF.ORM</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\..\..\shared\OpenNETCF.ORM\SQLite\OpenNETCF.ORM.SQLite\OpenNETCF.ORM.SQLite.FFx.csproj">
-      <Project>{750ed0af-fe89-4efc-bf7a-c29cbdd8aa7f}</Project>
-      <Name>OpenNETCF.ORM.SQLite.FFx</Name>
-    </ProjectReference>
     <ProjectReference Include="..\FormManager.Common\FormManager.Common.csproj">
       <Project>{0E1DCC2B-A186-4C70-9114-AE2368034BD1}</Project>
       <Name>FormManager.Common</Name>

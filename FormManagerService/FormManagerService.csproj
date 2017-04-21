@@ -59,8 +59,8 @@
       <HintPath>..\packages\Newtonsoft.Json.10.0.2\lib\net45\Newtonsoft.Json.dll</HintPath>
       <Private>True</Private>
     </Reference>
-    <Reference Include="OpenNETCF.Extensions, Version=1.0.186.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\packages\com.opennetcf.extensions.ffx.1.0.186.0\lib\OpenNETCF.Extensions.dll</HintPath>
+    <Reference Include="OpenNETCF.Extensions, Version=1.0.17110.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\com.opennetcf.extensions.ffx.1.0.17110.0\lib\net40\OpenNETCF.Extensions.dll</HintPath>
       <Private>True</Private>
     </Reference>
     <Reference Include="OpenNETCF.IoC, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">

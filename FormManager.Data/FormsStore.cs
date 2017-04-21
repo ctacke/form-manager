@@ -16,7 +16,7 @@ namespace OpenNETCF.FormManager
         private ISQLBasedStore m_store;
 
         public FormsStore()
-            : this(@"C:\Repos\OpenNETCF\products\FormManager\FormManager.sqlite")
+            : this(@"..\..\..\FormManager.sqlite")
         {
         }
 
