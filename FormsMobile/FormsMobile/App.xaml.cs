@@ -1,4 +1,9 @@
-﻿using System;
+﻿using FormsMobile.Services;
+using FormsMobile.ViewModels;
+using FormsMobile.Views;
+using OpenNETCF.IoC;
+using OpenNETCF.MVVM;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -11,9 +16,34 @@ namespace FormsMobile
     {
         public App()
         {
-            InitializeComponent();
+            try
+            {
+                InitializeComponent();
 
-            MainPage = new FormsMobile.MainPage();
+                InitializeServices();
+                RegisterViews();
+
+                // register the Home and Login views and show the Login
+                // if we add a "remember me" feature, this logic will change slightly
+                NavigationService.SetHomeView<HomeView>(true, false);
+                NavigationService.SetLoginView<LoginView>(true);
+            }
+            catch (Exception ex)
+            {
+                // this is here to allow us to set a breakpoint to analyze problems
+                throw ex;
+            }
+        }
+
+        private void InitializeServices()
+        {
+            RootWorkItem.Services.AddNew<FormService, IFormService>();
+        }
+
+        private void RegisterViews()
+        {
+            NavigationService.Register<HomeView, HomeViewModel>();
+            NavigationService.Register<LoginView, LoginViewModel>();
         }
 
         protected override void OnStart()

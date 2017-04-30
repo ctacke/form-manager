@@ -38,10 +38,21 @@
     <Compile Include="App.xaml.cs">
       <DependentUpon>App.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Entities\AppContext.cs" />
     <Compile Include="MainPage.xaml.cs">
       <DependentUpon>MainPage.xaml</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Services\FormService.cs" />
+    <Compile Include="ViewModels\FormListViewModel.cs" />
+    <Compile Include="ViewModels\HomeViewModel.cs" />
+    <Compile Include="ViewModels\LoginViewModel.cs" />
+    <Compile Include="Views\HomeView.xaml.cs">
+      <DependentUpon>HomeView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\LoginView.xaml.cs">
+      <DependentUpon>LoginView.xaml</DependentUpon>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="MainPage.xaml">
@@ -54,18 +65,6 @@
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
-    <Reference Include="OpenNETCF.Extensions, Version=1.0.186.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\..\packages\com.opennetcf.extensions.pcl.1.0.186.0\lib\portable45-net45+win8+wpa81\OpenNETCF.Extensions.dll</HintPath>
-      <Private>True</Private>
-    </Reference>
-    <Reference Include="OpenNETCF.Google.Analytics, Version=1.0.16312.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\..\packages\com.opennetcf.analytics.google.pcl.1.0.16312.0\lib\portable-net45+netcore45+wpa81+wp8\OpenNETCF.Google.Analytics.dll</HintPath>
-      <Private>True</Private>
-    </Reference>
-    <Reference Include="OpenNETCF.IoC, Version=1.0.17026.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\..\packages\com.opennetcf.ioc.pcl.1.0.17026.0\lib\portable-net45+netcore45+wpa81+wp8\OpenNETCF.IoC.dll</HintPath>
-      <Private>True</Private>
-    </Reference>
     <Reference Include="Xamarin.Forms.Core, Version=2.0.0.0, Culture=neutral, processorArchitecture=MSIL">
       <HintPath>..\..\packages\Xamarin.Forms.2.3.4.231\lib\portable-win+net45+wp80+win81+wpa81+MonoAndroid10+Xamarin.iOS10+xamarinmac20\Xamarin.Forms.Core.dll</HintPath>
       <Private>True</Private>
@@ -83,10 +82,39 @@
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\..\..\shared\OpenNETCF.Extensions\OpenNETCF.Extensions.PCL.csproj">
+      <Project>{0ccfeee5-54e1-45f6-b699-d64ce5a36f00}</Project>
+      <Name>OpenNETCF.Extensions.PCL</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\shared\OpenNETCF.IoC\OpenNETCF.IoC.Xamarin.Forms.csproj">
+      <Project>{E2FEFCB7-D29F-47AD-BFE4-9DC02FEABF5D}</Project>
+      <Name>OpenNETCF.IoC.Xamarin.Forms</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\shared\OpenNETCF.Xamarin.Forms\Portable\OpenNETCF.Xamarin.Forms.csproj">
+      <Project>{dd0c6e1f-1ab9-424e-b268-5ed036cb0072}</Project>
+      <Name>OpenNETCF.Xamarin.Forms</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\shared\OpenNETCF.Xamarin.MVVM\OpenNETCF.Xamarin.MVVM.csproj">
+      <Project>{9A144F78-F873-47D5-AC54-51EA02DCF83A}</Project>
+      <Name>OpenNETCF.Xamarin.MVVM</Name>
+    </ProjectReference>
     <ProjectReference Include="..\..\FormManager.Common\FormManager.Common.PCL.csproj">
       <Project>{67f9d3a8-f71e-4428-913f-c37ae82cdb24}</Project>
       <Name>FormManager.Common.PCL</Name>
     </ProjectReference>
+  </ItemGroup>
+  <ItemGroup />
+  <ItemGroup>
+    <EmbeddedResource Include="Views\LoginView.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Views\HomeView.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath32)\Microsoft\Portable\$(TargetFrameworkVersion)\Microsoft.Portable.CSharp.targets" />
   <Import Project="..\..\packages\Xamarin.Forms.2.3.4.231\build\portable-win+net45+wp80+win81+wpa81+MonoAndroid10+Xamarin.iOS10+xamarinmac20\Xamarin.Forms.targets" Condition="Exists('..\..\packages\Xamarin.Forms.2.3.4.231\build\portable-win+net45+wp80+win81+wpa81+MonoAndroid10+Xamarin.iOS10+xamarinmac20\Xamarin.Forms.targets')" />

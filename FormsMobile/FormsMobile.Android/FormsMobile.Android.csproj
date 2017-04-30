@@ -54,18 +54,6 @@
     </Reference>
     <Reference Include="Mono.Android" />
     <Reference Include="mscorlib" />
-    <Reference Include="OpenNETCF.Extensions, Version=1.0.186.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\..\packages\com.opennetcf.extensions.pcl.1.0.186.0\lib\MonoAndroid10\OpenNETCF.Extensions.dll</HintPath>
-      <Private>True</Private>
-    </Reference>
-    <Reference Include="OpenNETCF.Google.Analytics, Version=1.0.16312.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\..\packages\com.opennetcf.analytics.google.pcl.1.0.16312.0\lib\portable-net45+netcore45+wpa81+wp8\OpenNETCF.Google.Analytics.dll</HintPath>
-      <Private>True</Private>
-    </Reference>
-    <Reference Include="OpenNETCF.IoC, Version=1.0.17026.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\..\packages\com.opennetcf.ioc.pcl.1.0.17026.0\lib\portable-net45+netcore45+wpa81+wp8\OpenNETCF.IoC.dll</HintPath>
-      <Private>True</Private>
-    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.ObjectModel" />
@@ -145,6 +133,18 @@
     <AndroidResource Include="Resources\values\styles.xml" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\..\..\shared\OpenNETCF.Google.Analytics\OpenNETCF.Google.Analytics.Android\OpenNETCF.Google.Analytics.Android.csproj">
+      <Project>{a9cf579a-c302-46eb-86aa-a346b1855c30}</Project>
+      <Name>OpenNETCF.Google.Analytics.Android</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\shared\OpenNETCF.Xamarin.Forms\OpenNETCF.Xamarin.Forms.Android\OpenNETCF.Xamarin.Forms.Android.csproj">
+      <Project>{e09b41f3-31e7-4e2d-83aa-e74176bd28d7}</Project>
+      <Name>OpenNETCF.Xamarin.Forms.Android</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\shared\OpenNETCF.Xamarin.Forms\Portable\OpenNETCF.Xamarin.Forms.csproj">
+      <Project>{dd0c6e1f-1ab9-424e-b268-5ed036cb0072}</Project>
+      <Name>OpenNETCF.Xamarin.Forms</Name>
+    </ProjectReference>
     <ProjectReference Include="..\..\FormManager.Common\FormManager.Common.PCL.csproj">
       <Project>{67f9d3a8-f71e-4428-913f-c37ae82cdb24}</Project>
       <Name>FormManager.Common.PCL</Name>

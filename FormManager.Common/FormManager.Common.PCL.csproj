@@ -42,7 +42,7 @@
     <Compile Include="Entities\FormSummary.cs" />
     <Compile Include="Entities\Question.cs" />
     <Compile Include="Entities\QuestionCollection.cs" />
-    <Compile Include="Interfaces\IFormService.cs" />
+    <Compile Include="Interfaces\IFormStore.cs" />
     <Compile Include="JsonConverters\FieldBlockConverter.cs" />
     <Compile Include="JsonConverters\QuestionCollectionConverter.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -51,18 +51,6 @@
   <ItemGroup>
     <Reference Include="Newtonsoft.Json, Version=10.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
       <HintPath>..\packages\Newtonsoft.Json.10.0.2\lib\portable-net45+win8+wpa81+wp8\Newtonsoft.Json.dll</HintPath>
-      <Private>True</Private>
-    </Reference>
-    <Reference Include="OpenNETCF.Extensions">
-      <HintPath>..\packages\com.opennetcf.extensions.pcl.1.0.186.0\lib\portable45-net45+win8+wpa81\OpenNETCF.Extensions.dll</HintPath>
-      <Private>True</Private>
-    </Reference>
-    <Reference Include="OpenNETCF.Google.Analytics">
-      <HintPath>..\packages\com.opennetcf.analytics.google.pcl.1.0.16312.0\lib\portable-net45+netcore45+wpa81+wp8\OpenNETCF.Google.Analytics.dll</HintPath>
-      <Private>True</Private>
-    </Reference>
-    <Reference Include="OpenNETCF.IoC">
-      <HintPath>..\packages\com.opennetcf.ioc.pcl.1.0.17026.0\lib\portable-net45+netcore45+wpa81+wp8\OpenNETCF.IoC.dll</HintPath>
       <Private>True</Private>
     </Reference>
     <Reference Include="Xamarin.Forms.Core">
@@ -82,6 +70,16 @@
     <None Include="packages.FormManager.Common.PCL.config">
       <SubType>Designer</SubType>
     </None>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\shared\OpenNETCF.Extensions\OpenNETCF.Extensions.PCL.csproj">
+      <Project>{0ccfeee5-54e1-45f6-b699-d64ce5a36f00}</Project>
+      <Name>OpenNETCF.Extensions.PCL</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\shared\OpenNETCF.IoC\OpenNETCF.IoC.Xamarin.Forms.csproj">
+      <Project>{e2fefcb7-d29f-47ad-bfe4-9dc02feabf5d}</Project>
+      <Name>OpenNETCF.IoC.Xamarin.Forms</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath32)\Microsoft\Portable\$(TargetFrameworkVersion)\Microsoft.Portable.CSharp.targets" />
   <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">

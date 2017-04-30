@@ -1,0 +1,24 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="FormsMobile.Views.HomeView">
+    <ListView 
+        ItemsSource="{Binding FormList.AllForms}"
+        IsPullToRefreshEnabled="True"
+        SelectedItem="{Binding FormList.SelectedForm}"
+        RefreshCommand="{Binding FormList.HandleRefresh}"
+        IsRefreshing="{Binding FormList.IsRefreshing}"
+        Header="Available Forms"
+        >
+        <ListView.ItemTemplate>
+            <DataTemplate>
+                <ViewCell>
+                    <StackLayout>
+                        <Label Text="{Binding FormName}" />
+                        <Label Text="{Binding Description}" />
+                    </StackLayout>
+                </ViewCell>
+            </DataTemplate>
+        </ListView.ItemTemplate>
+    </ListView>
+</ContentPage>

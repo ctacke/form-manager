@@ -4,6 +4,8 @@
     {
         YesNo,
         PassFail,
-        Input
+        Input,
+        Picture,
+        Geolocation
     }
 }
