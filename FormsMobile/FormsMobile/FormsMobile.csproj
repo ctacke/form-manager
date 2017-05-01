@@ -44,9 +44,16 @@
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Services\FormService.cs" />
+    <Compile Include="Styles\FormListStyles.xaml.cs">
+      <DependentUpon>FormListStyles.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="ViewModels\FormEntryViewModel.cs" />
     <Compile Include="ViewModels\FormListViewModel.cs" />
     <Compile Include="ViewModels\HomeViewModel.cs" />
     <Compile Include="ViewModels\LoginViewModel.cs" />
+    <Compile Include="Views\FormEntryView.xaml.cs">
+      <DependentUpon>FormEntryView.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Views\HomeView.xaml.cs">
       <DependentUpon>HomeView.xaml</DependentUpon>
     </Compile>
@@ -82,7 +89,7 @@
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\..\..\shared\OpenNETCF.Extensions\OpenNETCF.Extensions.PCL.csproj">
+    <ProjectReference Include="..\..\..\extensions\OpenNETCF.Extensions.PCL.csproj">
       <Project>{0ccfeee5-54e1-45f6-b699-d64ce5a36f00}</Project>
       <Name>OpenNETCF.Extensions.PCL</Name>
     </ProjectReference>
@@ -90,11 +97,11 @@
       <Project>{E2FEFCB7-D29F-47AD-BFE4-9DC02FEABF5D}</Project>
       <Name>OpenNETCF.IoC.Xamarin.Forms</Name>
     </ProjectReference>
-    <ProjectReference Include="..\..\..\shared\OpenNETCF.Xamarin.Forms\Portable\OpenNETCF.Xamarin.Forms.csproj">
+    <ProjectReference Include="..\..\..\xamarin-forms\Portable\OpenNETCF.Xamarin.Forms.csproj">
       <Project>{dd0c6e1f-1ab9-424e-b268-5ed036cb0072}</Project>
       <Name>OpenNETCF.Xamarin.Forms</Name>
     </ProjectReference>
-    <ProjectReference Include="..\..\..\shared\OpenNETCF.Xamarin.MVVM\OpenNETCF.Xamarin.MVVM.csproj">
+    <ProjectReference Include="..\..\..\mvvm\OpenNETCF.Xamarin.MVVM.csproj">
       <Project>{9A144F78-F873-47D5-AC54-51EA02DCF83A}</Project>
       <Name>OpenNETCF.Xamarin.MVVM</Name>
     </ProjectReference>
@@ -103,7 +110,12 @@
       <Name>FormManager.Common.PCL</Name>
     </ProjectReference>
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <EmbeddedResource Include="Views\FormEntryView.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="Views\LoginView.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
@@ -112,6 +124,12 @@
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="Views\HomeView.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Styles\FormListStyles.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
       <SubType>Designer</SubType>
     </EmbeddedResource>

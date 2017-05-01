@@ -18,6 +18,7 @@ namespace FormsMobile.ViewModels
         public FormSummary[] m_forms;
         private FormSummary m_selectedForm;
         private bool m_isRefreshing;
+        private bool m_hasSelection;
 
         public FormListViewModel()
         {
@@ -41,6 +42,18 @@ namespace FormsMobile.ViewModels
             {
                 m_selectedForm = value;
                 RaisePropertyChanged();
+                HasSelection = (SelectedForm != null);
+            }
+        }
+
+        public bool HasSelection
+        {
+            get { return m_hasSelection; }
+            set
+            {
+                if (HasSelection == value) return;
+                m_hasSelection = value;
+                RaisePropertyChanged();
             }
         }
 
@@ -63,6 +76,18 @@ namespace FormsMobile.ViewModels
                 {
                     Refresh();
                 });
+            }
+        }
+
+        public ICommand HandleCreateForm
+        {
+            get
+            {
+                return new ValidatingCommand(() =>
+                {
+
+                },
+                () => SelectedForm != null );
             }
         }
 

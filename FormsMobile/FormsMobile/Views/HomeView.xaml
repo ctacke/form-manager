@@ -1,24 +1,57 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:theme="clr-namespace:FormsMobile.Styles"
              x:Class="FormsMobile.Views.HomeView">
-    <ListView 
-        ItemsSource="{Binding FormList.AllForms}"
-        IsPullToRefreshEnabled="True"
-        SelectedItem="{Binding FormList.SelectedForm}"
-        RefreshCommand="{Binding FormList.HandleRefresh}"
-        IsRefreshing="{Binding FormList.IsRefreshing}"
-        Header="Available Forms"
-        >
-        <ListView.ItemTemplate>
-            <DataTemplate>
-                <ViewCell>
-                    <StackLayout>
-                        <Label Text="{Binding FormName}" />
-                        <Label Text="{Binding Description}" />
-                    </StackLayout>
-                </ViewCell>
-            </DataTemplate>
-        </ListView.ItemTemplate>
-    </ListView>
+    
+    <StackLayout.Resources>
+        <ResourceDictionary MergedWith="theme:FormListStyles" />
+    </StackLayout.Resources>
+    
+    <StackLayout>
+        <ListView 
+            ItemsSource="{Binding FormList.AllForms}"
+            HasUnevenRows="True"
+            IsPullToRefreshEnabled="True"
+            SelectedItem="{Binding FormList.SelectedForm}"
+            RefreshCommand="{Binding FormList.HandleRefresh}"
+            IsRefreshing="{Binding FormList.IsRefreshing}"
+            Header="Available Forms"
+            >
+            <ListView.ItemTemplate>
+                <DataTemplate>
+                    <ViewCell>
+                        <StackLayout>
+                            <Label 
+                                Text="{Binding FormName}"
+                                Style="{StaticResource formNameLabel}" />
+                            <Label 
+                                Text="{Binding Description}"
+                                Style="{StaticResource formDescriptionLabel}" />
+                        </StackLayout>
+                    </ViewCell>
+                </DataTemplate>
+            </ListView.ItemTemplate>
+        </ListView>
+        <Button
+            Text="Select Form"
+            IsEnabled="False"
+            Style="{StaticResource selectFormButtonDisabled}"
+            Command="{Binding FormList.HandleCreateForm}">
+        <Button.Triggers>
+            <DataTrigger
+                TargetType="Button"
+                Binding="{Binding FormList.HasSelection}"
+                Value="True">
+                <Setter
+                    Property="Style"
+                    Value="{StaticResource selectFormButtonEnabled}" />
+                    <Setter
+                    Property="Text"
+                    Value="Create Selected Form" />
+                </DataTrigger>
+                
+        </Button.Triggers>
+        </Button>
+    </StackLayout>
 </ContentPage>

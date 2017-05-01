@@ -1,0 +1,25 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ResourceDictionary xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:oncf="clr-namespace:OpenNETCF;assembly=OpenNETCF.Forms"
+             x:Class="FormsMobile.Styles.FormListStyles">
+
+    <Color x:Key="enabledButtonTextColor">Black</Color>
+    <Color x:Key="disabledButtonTextColor">Gray</Color>
+
+    <Style x:Key="formNameLabel" TargetType="Label">
+        <Setter Property="FontSize" Value="{oncf:ScaledDouble FontSize=24}" />
+    </Style>
+
+    <Style x:Key="formDescriptionLabel" TargetType="Label">
+        <Setter Property="FontSize" Value="{oncf:ScaledDouble FontSize=16}" />
+    </Style>
+
+    <Style x:Key="selectFormButtonEnabled" TargetType="Button">
+        <Setter Property="TextColor" Value="{StaticResource enabledButtonTextColor}" />
+    </Style>
+    <Style x:Key="selectFormButtonDisabled" TargetType="Button">
+        <Setter Property="TextColor" Value="{StaticResource disabledButtonTextColor}" />
+    </Style>
+
+</ResourceDictionary>

@@ -1,6 +1,7 @@
 ﻿using FormsMobile.Services;
 using FormsMobile.ViewModels;
 using FormsMobile.Views;
+using OpenNETCF;
 using OpenNETCF.IoC;
 using OpenNETCF.MVVM;
 using System;
@@ -42,8 +43,9 @@ namespace FormsMobile
 
         private void RegisterViews()
         {
-            NavigationService.Register<HomeView, HomeViewModel>();
             NavigationService.Register<LoginView, LoginViewModel>();
+            NavigationService.Register<HomeView, HomeViewModel>();
+            NavigationService.Register<FormEntryView, FormEntryViewModel>();
         }
 
         protected override void OnStart()

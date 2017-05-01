@@ -137,11 +137,11 @@
       <Project>{a9cf579a-c302-46eb-86aa-a346b1855c30}</Project>
       <Name>OpenNETCF.Google.Analytics.Android</Name>
     </ProjectReference>
-    <ProjectReference Include="..\..\..\shared\OpenNETCF.Xamarin.Forms\OpenNETCF.Xamarin.Forms.Android\OpenNETCF.Xamarin.Forms.Android.csproj">
+    <ProjectReference Include="..\..\..\xamarin-forms\OpenNETCF.Xamarin.Forms.Android\OpenNETCF.Xamarin.Forms.Android.csproj">
       <Project>{e09b41f3-31e7-4e2d-83aa-e74176bd28d7}</Project>
       <Name>OpenNETCF.Xamarin.Forms.Android</Name>
     </ProjectReference>
-    <ProjectReference Include="..\..\..\shared\OpenNETCF.Xamarin.Forms\Portable\OpenNETCF.Xamarin.Forms.csproj">
+    <ProjectReference Include="..\..\..\xamarin-forms\Portable\OpenNETCF.Xamarin.Forms.csproj">
       <Project>{dd0c6e1f-1ab9-424e-b268-5ed036cb0072}</Project>
       <Name>OpenNETCF.Xamarin.Forms</Name>
     </ProjectReference>

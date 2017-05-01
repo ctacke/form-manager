@@ -11,7 +11,7 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FormManager.Common.PCL", "F
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OpenNETCF.IoC.Xamarin.Forms", "..\shared\OpenNETCF.IoC\OpenNETCF.IoC.Xamarin.Forms.csproj", "{E2FEFCB7-D29F-47AD-BFE4-9DC02FEABF5D}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OpenNETCF.Extensions.PCL", "..\shared\OpenNETCF.Extensions\OpenNETCF.Extensions.PCL.csproj", "{0CCFEEE5-54E1-45F6-B699-D64CE5A36F00}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OpenNETCF.Extensions.PCL", "..\extensions\OpenNETCF.Extensions.PCL.csproj", "{0CCFEEE5-54E1-45F6-B699-D64CE5A36F00}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OpenNETCF.Google.Analytics", "..\shared\OpenNETCF.Google.Analytics\Portable\OpenNETCF.Google.Analytics.csproj", "{073B3F16-C162-43F6-A0A2-0D4008BF817D}"
 EndProject
@@ -19,11 +19,11 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Reference", "Reference", "{
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OpenNETCF.Google.Analytics.Android", "..\shared\OpenNETCF.Google.Analytics\OpenNETCF.Google.Analytics.Android\OpenNETCF.Google.Analytics.Android.csproj", "{A9CF579A-C302-46EB-86AA-A346B1855C30}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OpenNETCF.Xamarin.Forms", "..\shared\OpenNETCF.Xamarin.Forms\Portable\OpenNETCF.Xamarin.Forms.csproj", "{DD0C6E1F-1AB9-424E-B268-5ED036CB0072}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OpenNETCF.Xamarin.Forms", "..\xamarin-forms\Portable\OpenNETCF.Xamarin.Forms.csproj", "{DD0C6E1F-1AB9-424E-B268-5ED036CB0072}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OpenNETCF.Xamarin.Forms.Android", "..\shared\OpenNETCF.Xamarin.Forms\OpenNETCF.Xamarin.Forms.Android\OpenNETCF.Xamarin.Forms.Android.csproj", "{E09B41F3-31E7-4E2D-83AA-E74176BD28D7}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OpenNETCF.Xamarin.Forms.Android", "..\xamarin-forms\OpenNETCF.Xamarin.Forms.Android\OpenNETCF.Xamarin.Forms.Android.csproj", "{E09B41F3-31E7-4E2D-83AA-E74176BD28D7}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OpenNETCF.Xamarin.MVVM", "..\shared\OpenNETCF.Xamarin.MVVM\OpenNETCF.Xamarin.MVVM.csproj", "{9A144F78-F873-47D5-AC54-51EA02DCF83A}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OpenNETCF.Xamarin.MVVM", "..\mvvm\OpenNETCF.Xamarin.MVVM.csproj", "{9A144F78-F873-47D5-AC54-51EA02DCF83A}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
