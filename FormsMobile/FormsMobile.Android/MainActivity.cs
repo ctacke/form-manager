@@ -20,6 +20,8 @@ namespace FormsMobile.Droid
             base.OnCreate(bundle);
 
             global::Xamarin.Forms.Forms.Init(this, bundle);
+            OpenNETCF.Forms.Init();
+
             LoadApplication(new App());
         }
     }
