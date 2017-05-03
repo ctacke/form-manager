@@ -36,14 +36,6 @@
       <HintPath>..\packages\Newtonsoft.Json.10.0.2\lib\net45\Newtonsoft.Json.dll</HintPath>
       <Private>True</Private>
     </Reference>
-    <Reference Include="OpenNETCF.Extensions, Version=1.0.186.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\packages\com.opennetcf.extensions.ffx.1.0.186.0\lib\OpenNETCF.Extensions.dll</HintPath>
-      <Private>True</Private>
-    </Reference>
-    <Reference Include="OpenNETCF.IoC, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\packages\com.opennetcf.ioc.ffx.1.0.186.0\lib\OpenNETCF.IoC.dll</HintPath>
-      <Private>True</Private>
-    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />
@@ -59,8 +51,8 @@
     <Compile Include="Entities\FormSummary.cs" />
     <Compile Include="Entities\QuestionCollection.cs" />
     <Compile Include="Entities\Question.cs" />
-    <Compile Include="Interfaces\IFormService.cs" />
     <Compile Include="Entities\Form.cs" />
+    <Compile Include="Interfaces\IFormStore.cs" />
     <Compile Include="JsonConverters\QuestionCollectionConverter.cs" />
     <Compile Include="JsonConverters\FieldBlockConverter.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -69,6 +61,16 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.FormManager.Common.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\extensions\OpenNETCF.Extensions.PCL.csproj">
+      <Project>{0ccfeee5-54e1-45f6-b699-d64ce5a36f00}</Project>
+      <Name>OpenNETCF.Extensions.PCL</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\shared\OpenNETCF.IoC\OpenNETCF.IoC.PCL.csproj">
+      <Project>{e2fefcb7-d29f-47ad-bfe4-9dc02feabf5d}</Project>
+      <Name>OpenNETCF.IoC.PCL</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

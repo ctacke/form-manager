@@ -39,6 +39,8 @@ namespace FormsMobile
         private void InitializeServices()
         {
             RootWorkItem.Services.AddNew<FormService, IFormService>();
+            var syncService = new DataSyncService("192.168.0.101:3000");
+            RootWorkItem.Services.Add(syncService);
         }
 
         private void RegisterViews()

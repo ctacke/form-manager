@@ -1,13 +1,21 @@
-﻿using OpenNETCF;
+﻿using Newtonsoft.Json;
+using Newtonsoft.Json.Converters;
+using OpenNETCF;
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Net;
+using System.Net.Http;
 using System.Text;
 using System.Threading;
 using System.Threading.Tasks;
 
 namespace FormsMobile.Services
 {
+    // Required libraries:
+    //   OpenNETCF.Extensions
+    //   Newtonsoft Json.NET
+
     public abstract class DataSyncServiceBase : DisposableBase
     {
         protected abstract Task OnPublishAsync();
@@ -77,6 +85,46 @@ namespace FormsMobile.Services
 
                 // now pause
                 await Task.Delay(DataRefreshPeriodSeconds * 1000);
+            }
+        }
+
+        private HttpClient m_client;
+
+        protected virtual string GetRequestAuthorizationKey() { return null; }
+        protected virtual string GetRequestAcceptHeader() { return null; }
+
+        protected HttpClient ServiceClient
+        {
+            get
+            {
+                if (m_client == null)
+                {
+                    m_client = new HttpClient();
+                    var authKey = GetRequestAuthorizationKey();
+                    if (authKey != null)
+                    {
+                        m_client.DefaultRequestHeaders.Add("Authorization", authKey);
+                    }
+                    var accept = GetRequestAcceptHeader();
+
+                    m_client.DefaultRequestHeaders.Add("Accept", accept ?? "application/json");
+                }
+
+                return m_client;
+            }
+        }
+
+        protected async Task<T> GetEntity<T>(string path)
+        {
+            try
+            {
+                var data = await ServiceClient.GetStringAsync(path);
+                var result = JsonConvert.DeserializeObject<T>(data, new IsoDateTimeConverter());
+                return result;
+            }
+            catch (Exception ex)
+            {
+                throw ex;
             }
         }
     }
