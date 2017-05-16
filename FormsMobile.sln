@@ -9,15 +9,15 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FormsMobile", "FormsMobile\
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FormManager.Common.PCL", "FormManager.Common\FormManager.Common.PCL.csproj", "{67F9D3A8-F71E-4428-913F-C37AE82CDB24}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OpenNETCF.IoC.Xamarin.Forms", "..\shared\OpenNETCF.IoC\OpenNETCF.IoC.Xamarin.Forms.csproj", "{E2FEFCB7-D29F-47AD-BFE4-9DC02FEABF5D}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OpenNETCF.IoC.Xamarin.Forms", "..\ioc\OpenNETCF.IoC\OpenNETCF.IoC.Xamarin.Forms.csproj", "{E2FEFCB7-D29F-47AD-BFE4-9DC02FEABF5D}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OpenNETCF.Extensions.PCL", "..\extensions\OpenNETCF.Extensions.PCL.csproj", "{0CCFEEE5-54E1-45F6-B699-D64CE5A36F00}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OpenNETCF.Google.Analytics", "..\shared\OpenNETCF.Google.Analytics\Portable\OpenNETCF.Google.Analytics.csproj", "{073B3F16-C162-43F6-A0A2-0D4008BF817D}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OpenNETCF.Google.Analytics", "..\ga\Portable\OpenNETCF.Google.Analytics.csproj", "{073B3F16-C162-43F6-A0A2-0D4008BF817D}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Reference", "Reference", "{3A74A015-D3F5-4A53-8B59-D6FCBFF08640}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OpenNETCF.Google.Analytics.Android", "..\shared\OpenNETCF.Google.Analytics\OpenNETCF.Google.Analytics.Android\OpenNETCF.Google.Analytics.Android.csproj", "{A9CF579A-C302-46EB-86AA-A346B1855C30}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OpenNETCF.Google.Analytics.Android", "..\ga\OpenNETCF.Google.Analytics.Android\OpenNETCF.Google.Analytics.Android.csproj", "{A9CF579A-C302-46EB-86AA-A346B1855C30}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OpenNETCF.Xamarin.Forms", "..\xamarin-forms\Portable\OpenNETCF.Xamarin.Forms.csproj", "{DD0C6E1F-1AB9-424E-B268-5ED036CB0072}"
 EndProject

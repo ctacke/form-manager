@@ -133,10 +133,6 @@
     <AndroidResource Include="Resources\values\styles.xml" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\..\..\shared\OpenNETCF.Google.Analytics\OpenNETCF.Google.Analytics.Android\OpenNETCF.Google.Analytics.Android.csproj">
-      <Project>{a9cf579a-c302-46eb-86aa-a346b1855c30}</Project>
-      <Name>OpenNETCF.Google.Analytics.Android</Name>
-    </ProjectReference>
     <ProjectReference Include="..\..\..\xamarin-forms\OpenNETCF.Xamarin.Forms.Android\OpenNETCF.Xamarin.Forms.Android.csproj">
       <Project>{e09b41f3-31e7-4e2d-83aa-e74176bd28d7}</Project>
       <Name>OpenNETCF.Xamarin.Forms.Android</Name>
