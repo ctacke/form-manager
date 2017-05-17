@@ -53,6 +53,14 @@
       <HintPath>..\packages\Newtonsoft.Json.10.0.2\lib\portable-net45+win8+wpa81+wp8\Newtonsoft.Json.dll</HintPath>
       <Private>True</Private>
     </Reference>
+    <Reference Include="OpenNETCF.Extensions">
+      <HintPath>..\packages\com.opennetcf.extensions.pcl.1.0.17110.0\lib\portable45-net45+win8+wpa81\OpenNETCF.Extensions.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="OpenNETCF.IoC">
+      <HintPath>..\packages\com.opennetcf.ioc.pcl.1.0.17135.0\lib\portable-net45+netcore45+wpa81+wp8\OpenNETCF.IoC.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
     <Reference Include="Xamarin.Forms.Core">
       <HintPath>..\packages\Xamarin.Forms.2.3.4.231\lib\portable-win+net45+wp80+win81+wpa81+MonoAndroid10+Xamarin.iOS10+xamarinmac20\Xamarin.Forms.Core.dll</HintPath>
       <Private>True</Private>
@@ -70,16 +78,6 @@
     <None Include="packages.FormManager.Common.PCL.config">
       <SubType>Designer</SubType>
     </None>
-  </ItemGroup>
-  <ItemGroup>
-    <ProjectReference Include="..\..\extensions\OpenNETCF.Extensions.PCL.csproj">
-      <Project>{0ccfeee5-54e1-45f6-b699-d64ce5a36f00}</Project>
-      <Name>OpenNETCF.Extensions.PCL</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\..\ioc\OpenNETCF.IoC\OpenNETCF.IoC.Xamarin.Forms.csproj">
-      <Project>{e2fefcb7-d29f-47ad-bfe4-9dc02feabf5d}</Project>
-      <Name>OpenNETCF.IoC.Xamarin.Forms</Name>
-    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath32)\Microsoft\Portable\$(TargetFrameworkVersion)\Microsoft.Portable.CSharp.targets" />
   <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">

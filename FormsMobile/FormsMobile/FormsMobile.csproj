@@ -78,6 +78,25 @@
       <HintPath>..\..\packages\Newtonsoft.Json.10.0.2\lib\portable-net45+win8+wpa81+wp8\Newtonsoft.Json.dll</HintPath>
       <Private>True</Private>
     </Reference>
+    <Reference Include="OpenNETCF.Extensions">
+      <HintPath>..\..\packages\com.opennetcf.extensions.pcl.1.0.17110.0\lib\portable45-net45+win8+wpa81\OpenNETCF.Extensions.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="OpenNETCF.Forms">
+      <HintPath>..\..\packages\com.opennetcf.xamarin.forms.1.0.17137.0\lib\portable45-net45+win8+wpa81\OpenNETCF.Forms.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="OpenNETCF.Google.Analytics">
+      <HintPath>..\..\packages\com.opennetcf.analytics.google.pcl.1.0.17135.0\lib\portable-net45+netcore45+wpa81+wp8\OpenNETCF.Google.Analytics.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="OpenNETCF.IoC">
+      <HintPath>..\..\packages\com.opennetcf.ioc.pcl.1.0.17135.0\lib\portable-net45+netcore45+wpa81+wp8\OpenNETCF.IoC.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="OpenNETCF.Xamarin.MVVM">
+      <HintPath>..\..\packages\com.opennetcf.xamarin.mvvm.1.0.17137.0\lib\portable-net45+netcore45+wpa81+wp8\OpenNETCF.Xamarin.MVVM.dll</HintPath>
+    </Reference>
     <Reference Include="Xamarin.Forms.Core, Version=2.0.0.0, Culture=neutral, processorArchitecture=MSIL">
       <HintPath>..\..\packages\Xamarin.Forms.2.3.4.231\lib\portable-win+net45+wp80+win81+wpa81+MonoAndroid10+Xamarin.iOS10+xamarinmac20\Xamarin.Forms.Core.dll</HintPath>
       <Private>True</Private>
@@ -95,22 +114,6 @@
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\..\..\extensions\OpenNETCF.Extensions.PCL.csproj">
-      <Project>{0ccfeee5-54e1-45f6-b699-d64ce5a36f00}</Project>
-      <Name>OpenNETCF.Extensions.PCL</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\..\..\ioc\OpenNETCF.IoC\OpenNETCF.IoC.Xamarin.Forms.csproj">
-      <Project>{E2FEFCB7-D29F-47AD-BFE4-9DC02FEABF5D}</Project>
-      <Name>OpenNETCF.IoC.Xamarin.Forms</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\..\..\xamarin-forms\Portable\OpenNETCF.Xamarin.Forms.csproj">
-      <Project>{dd0c6e1f-1ab9-424e-b268-5ed036cb0072}</Project>
-      <Name>OpenNETCF.Xamarin.Forms</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\..\..\mvvm\OpenNETCF.Xamarin.MVVM.csproj">
-      <Project>{9A144F78-F873-47D5-AC54-51EA02DCF83A}</Project>
-      <Name>OpenNETCF.Xamarin.MVVM</Name>
-    </ProjectReference>
     <ProjectReference Include="..\..\FormManager.Common\FormManager.Common.PCL.csproj">
       <Project>{67f9d3a8-f71e-4428-913f-c37ae82cdb24}</Project>
       <Name>FormManager.Common.PCL</Name>
